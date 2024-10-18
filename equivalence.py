@@ -39,7 +39,7 @@ def check_equivalence_partition(classes, partitions, relation):
 def test_equivalence_partition():
     relation = lambda x, y: (x - y) % 4 == 0
     classes, partitions = equivalence_partition(
-        range(-3, 5),
+        range(-10, 11),
         relation
     )
     check_equivalence_partition(classes, partitions, relation)
