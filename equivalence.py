@@ -46,6 +46,13 @@ def test_equivalence_partition():
     for c in classes: print(c)
     for o, c in partitions.items(): print(o, ':', c)
 
+def performance_test():
+    import time
+    relation = lambda x, y: (x - y) % 4 == 0
+    start_time = time.time()
+    classes, partitions = equivalence_partition(range(10000), relation)
+    end_time = time.time()
+    print(f"Time taken: {end_time - start_time} seconds")
 
 if __name__ == '__main__':
     test_equivalence_partition()
