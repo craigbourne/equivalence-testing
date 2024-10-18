@@ -37,7 +37,7 @@ def check_equivalence_partition(classes, partitions, relation):
 
 
 def test_equivalence_partition():
-    relation = lambda x, y: (x - y) % 4 == 0
+    relation = lambda x, y: abs(x - y) <= 2  # Group numbers within 2 of each other
     classes, partitions = equivalence_partition(
         range(-10, 11),
         relation
